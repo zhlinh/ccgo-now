@@ -1,0 +1,6 @@
+# CCGO dependencies
+.ccgo/
+
+# Conan generated files with user-specific paths
+CMakeUserPresets.json
+

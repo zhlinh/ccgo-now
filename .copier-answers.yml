@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier
+_commit: 5eb0dff
+_src_path: https://github.com/zhlinh/ccgo-template.git
+cpy_document_url: https://zhlinh-ccgonow.pages.github.com
+cpy_git_base_host: github.com
+cpy_git_repo_url: git@github.com:zhlinh/ccgonow.git
+cpy_project_dependencies: EMPTY
+cpy_project_group_id: com.mojeter.ccgo
+cpy_project_name: ccgonow
+cpy_project_relative_path: ccgonow
+cpy_project_version: 1.0.0
+cpy_user_email: zhlinhng@gmail.com
+cpy_user_name: zhlinh
+cpy_with_include_src_tests: true
