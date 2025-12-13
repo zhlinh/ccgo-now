@@ -34,7 +34,7 @@ dependencies {
 ### Basic Usage
 
 ```kotlin
-import com.mojeter.ccgo.ccgonow.kmp.CcgonowKMP
+import com.mojeter.ccgo.samples.ccgonow.kmp.CcgonowKMP
 
 // Create an instance
 val ccgonow = CcgonowKMP()
@@ -54,7 +54,7 @@ println("Running on: $platform")
 ### Using the Singleton
 
 ```kotlin
-import com.mojeter.ccgo.ccgonow.kmp.CcgonowKMPFactory
+import com.mojeter.ccgo.samples.ccgonow.kmp.CcgonowKMPFactory
 
 // Get the singleton instance
 val ccgonow = CcgonowKMPFactory.getInstance()
@@ -217,7 +217,7 @@ ccgo build kmp
 **Usage**:
 
 ```kotlin
-import com.mojeter.ccgo.ccgonow.kmp.CcgonowKMP
+import com.mojeter.ccgo.samples.ccgonow.kmp.CcgonowKMP
 
 val ccgonow = CcgonowKMP()
 ccgonow.setDebugLog(true)  // Calls via JNI
@@ -271,7 +271,7 @@ The build.gradle.kts automatically configures cinterop to link with native libra
 **Usage**:
 
 ```kotlin
-import com.mojeter.ccgo.ccgonow.kmp.CcgonowKMP
+import com.mojeter.ccgo.samples.ccgonow.kmp.CcgonowKMP
 
 val ccgonow = CcgonowKMP()
 ccgonow.setDebugLog(true)  // Direct C call via cinterop
@@ -290,7 +290,7 @@ The native library must be in `java.library.path` or bundled with your applicati
 3. **Usage**:
 
 ```kotlin
-import com.mojeter.ccgo.ccgonow.kmp.CcgonowKMP
+import com.mojeter.ccgo.samples.ccgonow.kmp.CcgonowKMP
 
 val ccgonow = CcgonowKMP()
 ccgonow.setDebugLog(true)  // JNI call

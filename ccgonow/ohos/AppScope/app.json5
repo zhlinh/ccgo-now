@@ -1,6 +1,6 @@
 {
   app: {
-    bundleName: "com.mojeter.ccgo.ccgonow.demo",
+    bundleName: "com.mojeter.ccgo.samples.ccgonow.demo",
     vendor: "ccgo",
     versionCode: 10000,
     versionName: "1.0.0",

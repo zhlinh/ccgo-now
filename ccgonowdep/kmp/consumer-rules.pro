@@ -11,4 +11,4 @@
 }
 
 # Keep CcgonowdepKMP public API
--keep class com.mojeter.ccgo.ccgonowdep.kmp.** { *; }
+-keep class com.mojeter.ccgo.samples.ccgonowdep.kmp.** { *; }

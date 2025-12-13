@@ -5,7 +5,7 @@
             android:label="CCGO Sample App"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="com.mojeter.ccgo.example.android.MainActivity" android:exported="true">
+        <activity android:name="com.mojeter.ccgo.samples.example.android.MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

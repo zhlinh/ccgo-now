@@ -4,7 +4,7 @@ plugins {
     kotlin("android")
 }
 
-group "com.mojeter.ccgo.example"
+group "com.mojeter.ccgo.samples.example"
 version "1.0-SNAPSHOT"
 
 repositories {
@@ -20,9 +20,9 @@ dependencies {
 android {
     compileSdk = 34
     buildToolsVersion = "34.0.0"
-    namespace = "com.mojeter.ccgo.example"
+    namespace = "com.mojeter.ccgo.samples.example"
     defaultConfig {
-        applicationId = "com.mojeter.ccgo.example.android"
+        applicationId = "com.mojeter.ccgo.samples.example.android"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

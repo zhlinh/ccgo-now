@@ -7,7 +7,7 @@ plugins {
     kotlin("native.cocoapods")
 }
 
-group = "com.mojeter.ccgo.example"
+group = "com.mojeter.ccgo.samples.example"
 version = "1.0-SNAPSHOT"
 
 kotlin {
@@ -136,7 +136,7 @@ kotlin {
 android {
     compileSdk = 34
     buildToolsVersion = "34.0.0"
-    namespace = "com.mojeter.ccgo.example"
+    namespace = "com.mojeter.ccgo.samples.example"
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 24

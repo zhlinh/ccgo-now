@@ -1,4 +1,4 @@
-group "com.mojeter.ccgo.example"
+group "com.mojeter.ccgo.samples.example"
 version "1.0-SNAPSHOT"
 
 allprojects {

@@ -20,7 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.mojeter.ccgo.**.wrapper.**{*;}
--dontwarn com.mojeter.ccgo.**.wrapper.**
--keep class com.mojeter.ccgo.**.jni.**{*;}
--dontwarn com.mojeter.ccgo.**.jni.**
+-keep class com.mojeter.ccgo.samples.**.wrapper.**{*;}
+-dontwarn com.mojeter.ccgo.samples.**.wrapper.**
+-keep class com.mojeter.ccgo.samples.**.jni.**{*;}
+-dontwarn com.mojeter.ccgo.samples.**.jni.**

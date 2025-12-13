@@ -46,7 +46,7 @@ actual class CcgonowdepKMP actual constructor() {
 
     actual fun setDebugLog(enable: Boolean) {
         // Call via reflection to JNI class
-        val jniClass = Class.forName("com.mojeter.ccgo.ccgonowdep.jni.CcgonowdepJni")
+        val jniClass = Class.forName("com.mojeter.ccgo.samples.ccgonowdep.jni.CcgonowdepJni")
         val method = jniClass.getMethod("setDebugLog", Boolean::class.javaPrimitiveType)
         method.invoke(null, enable)  // Reflection + JNI overhead
     }

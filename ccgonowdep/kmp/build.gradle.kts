@@ -31,7 +31,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.mojeter.ccgo"
+group = "com.mojeter.ccgo.samples"
 version = "1.0.0"
 
 kotlin {
@@ -172,7 +172,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.mojeter.ccgo.ccgonowdep.kmp"
+    namespace = "com.mojeter.ccgo.samples.ccgonowdep.kmp"
     compileSdk = 34
 
     defaultConfig {

@@ -122,7 +122,7 @@ actual class CcgonowKMP {
 
     actual fun setDebugLog(enable: Boolean) {
         // Call via reflection to JNI class
-        val jniClass = Class.forName("com.mojeter.ccgo.ccgonow.jni.CcgonowJni")
+        val jniClass = Class.forName("com.mojeter.ccgo.samples.ccgonow.jni.CcgonowJni")
         val method = jniClass.getMethod("setDebugLog", Boolean::class.javaPrimitiveType)
         method.invoke(null, enable)
     }
