@@ -1,7 +1,6 @@
 [versions]
 # main project
 commMainProject = "1.0.0"
-commIsRelease = "false"
 commGroupId = "com.mojeter.ccgo.samples"
 commDependencies = """
                     EMPTY
