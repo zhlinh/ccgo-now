@@ -4,7 +4,7 @@
 
 [project]
 name = "ccgonow"
-version = "1.0.0"
+version = "1.0.1"
 description = "ccgonow library"
 repository = "git@github.com:zhlinh/ccgonow.git"
 authors = ["zhlinh <zhlinhng@gmail.com>"]
