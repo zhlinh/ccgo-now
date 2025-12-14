@@ -149,7 +149,7 @@ dependencies = [
 
 [publish.apple]
 # Pod/Package name (defaults to project name)
-pod_name = "Ccgonow"
+pod_name = "ccgonow"
 
 # Target platforms for publishing (ios, macos, tvos, watchos, or "all")
 platforms = ["ios", "macos"]
@@ -181,7 +181,7 @@ static_framework = true
 
 # CocoaPods dependencies
 dependencies = [
-    { name = "Ccgonowdep", version = "~> 1.0" },
+    { name = "ccgonowdep", version = "~> 1.0" },
 ]
 
 [publish.apple.spm]
@@ -196,7 +196,7 @@ use_local_path = true
 
 # SPM dependencies
 dependencies = [
-    { name = "Ccgonowdep", url = "https://github.com/zhlinh/ccgonowdep", from_version = "1.0.0" },
+    { name = "ccgonowdep", url = "https://github.com/zhlinh/ccgonowdep", from_version = "1.0.0" },
 ]
 
 # ===================================================================

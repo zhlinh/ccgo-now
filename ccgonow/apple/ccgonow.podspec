@@ -10,15 +10,10 @@ Pod::Spec.new do |s|
   # For git source (requires xcframework committed to repo):
   # s.source           = { :git => 'https://github.com/zhlinh/ccgo-now.git', :tag => 'v' + s.version.to_s }
   s.ios.deployment_target = '13.0'
-  s.macos.deployment_target = '10.15'
-  s.tvos.deployment_target = '13.0'
-  s.watchos.deployment_target = '6.0'
+  s.osx.deployment_target = '10.15'
   s.swift_version    = '5.0'
-  s.ios.vendored_frameworks = 'ios/ccgonow.xcframework'
-  s.macos.vendored_frameworks = 'macos/ccgonow.framework'
-  s.tvos.vendored_frameworks = 'tvos/ccgonow.xcframework'
-  s.watchos.vendored_frameworks = 'watchos/ccgonow.xcframework'
-
+  s.ios.vendored_frameworks = 'ios/Ccgonow.xcframework'
+  s.osx.vendored_frameworks = 'macos/Ccgonow.framework'
   s.libraries        = 'c++'
   s.pod_target_xcconfig = {
     'CLANG_CXX_LANGUAGE_STANDARD' => 'c++17',
