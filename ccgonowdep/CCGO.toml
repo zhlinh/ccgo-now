@@ -84,6 +84,22 @@ export_headers = [
     { src = "include/ccgonowdep/api/macos/Ccgonowdep.h", dest = "api" },
 ]
 
+[tvos]
+# tvOS exported header files
+export_headers = [
+    { src = "include/ccgonowdep/base/verinfo.h", dest = "base" },
+    { src = "include/ccgonowdep/api/apple/Ccgonowdep.h", dest = "api" },
+    { src = "include/ccgonowdep/api/tvos/Ccgonowdep.h", dest = "api" },
+]
+
+[watchos]
+# watchOS exported header files
+export_headers = [
+    { src = "include/ccgonowdep/base/verinfo.h", dest = "base" },
+    { src = "include/ccgonowdep/api/apple/Ccgonowdep.h", dest = "api" },
+    { src = "include/ccgonowdep/api/watchos/Ccgonowdep.h", dest = "api" },
+]
+
 [windows]
 # Windows exported header files
 export_headers = [
@@ -116,6 +132,24 @@ export_headers = [
 # 2. CCGO.toml
 # 3. Project-level gradle.properties (in project root)
 # 4. ~/.gradle/gradle.properties
+
+[publish.apple]
+# Apple platforms to publish (ios, macos, tvos, watchos)
+platforms = ["ios", "macos", "tvos", "watchos"]
+
+# Minimum deployment versions
+min_ios_version = "13.0"
+min_macos_version = "10.15"
+min_tvos_version = "13.0"
+min_watchos_version = "6.0"
+
+[publish.apple.cocoapods]
+enabled = true
+repo = "trunk"
+license = "MIT"
+
+[publish.apple.spm]
+enabled = true
 
 [publish.maven]
 # Maven group ID for publishing (e.g., "com.example.project")
