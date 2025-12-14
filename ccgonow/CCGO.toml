@@ -122,7 +122,7 @@ export_headers = [
 # 3. Project-level gradle.properties (in project root)
 # 4. ~/.gradle/gradle.properties
 
-[publish.maven]
+[publish.android.maven]
 # Maven group ID for publishing (e.g., "com.example.project")
 group_id = "com.mojeter.ccgo.samples"
 
@@ -132,9 +132,9 @@ group_id = "com.mojeter.ccgo.samples"
 # Channel description for artifact naming (e.g., "beta", "release", or empty string)
 channel_desc = ""
 
-# Maven dependencies to include in POM file (format: "groupId:artifactId:version")
+# Maven dependencies to include in POM file
 dependencies = [
-    "com.mojeter.ccgo.samples:ccgonowdep:1.0.0",
+    { group = "com.mojeter.ccgo.samples", artifact = "ccgonowdep", version = "1.0.0" },
 ]
 
 # Optional Maven configuration (credentials should be in env vars or gradle.properties)
@@ -179,6 +179,11 @@ homepage = "https://github.com/zhlinh/ccgonow"
 # Use static framework linking (default: true)
 static_framework = true
 
+# CocoaPods dependencies
+dependencies = [
+    { name = "Ccgonowdep", version = "~> 1.0" },
+]
+
 [publish.apple.spm]
 # Enable/disable Swift Package Manager publishing
 enabled = true
@@ -188,6 +193,11 @@ git_url = "https://github.com/zhlinh/ccgonow"
 
 # Use local path instead of URL (for development)
 use_local_path = true
+
+# SPM dependencies
+dependencies = [
+    { name = "Ccgonowdep", url = "https://github.com/zhlinh/ccgonowdep", from_version = "1.0.0" },
+]
 
 # ===================================================================
 # Dependencies (Optional)

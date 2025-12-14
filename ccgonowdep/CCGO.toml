@@ -151,7 +151,7 @@ license = "MIT"
 [publish.apple.spm]
 enabled = true
 
-[publish.maven]
+[publish.android.maven]
 # Maven group ID for publishing (e.g., "com.example.project")
 group_id = "com.mojeter.ccgo.samples"
 
@@ -161,7 +161,7 @@ group_id = "com.mojeter.ccgo.samples"
 # Channel description for artifact naming (e.g., "beta", "release", or empty string)
 channel_desc = ""
 
-# Maven dependencies to include in POM file (format: "groupId:artifactId:version")
+# Maven dependencies to include in POM file
 # No dependencies for this library
 dependencies = []
 
