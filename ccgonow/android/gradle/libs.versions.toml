@@ -1,22 +1,5 @@
 [versions]
-# main project
-commMainProject = "1.0.0"
-commGroupId = "com.mojeter.ccgo.samples"
-commDependencies = """
-                    EMPTY
-                   """
-compileSdkVersion = "34"
-commAndroidStl = "c++_shared"
-commPublishChannelDesc = "EMPTY"
-buildToolsVersion = "34.0.0"
-minSdkVersion = "19"
-appMinSdkVersion = "21"
-targetSdkVersion = "34"
-#cmakeAbiFilters = "arm64-v8a"
-cmakeAbiFilters = "armeabi-v7a,arm64-v8a,x86_64"
-cmakeVersion = "3.22.1"
-ndkVersion = "25.2.9519653"
-# android
+# Third-party library versions
 accompanist = "0.34.0"
 androidDesugarJdkLibs = "2.0.4"
 # AGP and tools should be updated together
