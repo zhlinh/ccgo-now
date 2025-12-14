@@ -4,7 +4,7 @@
 
 [project]
 name = "ccgonow"
-version = "1.0.1"
+version = "1.0.2"
 description = "ccgonow library"
 repository = "git@github.com:zhlinh/ccgonow.git"
 authors = ["zhlinh <zhlinhng@gmail.com>"]
@@ -152,7 +152,7 @@ dependencies = [
 pod_name = "ccgonow"
 
 # Target platforms for publishing (ios, macos, tvos, watchos, or "all")
-platforms = ["ios", "macos"]
+platforms = ["ios", "macos", "tvos", "watchos"]
 
 # Minimum deployment targets
 min_ios_version = "13.0"
