@@ -1,10 +1,10 @@
 {
   name: "ccgonowdep",
-  version: "0.0.1",
-  description: "",
+  version: "1.0.0",
+  description: "ccgonowdep library",
   keywords: ["ccgo"],
   homepage: "https://zhlinh-ccgonowdep.pages.github.com",
-  repository: "git@github.com:zhlinh/ccgonowdep.git",
+  repository: "https://github.com/zhlinh/ccgonowdep",
   author: "zhlinh",
   license: "MIT",
   dependencies: {},
