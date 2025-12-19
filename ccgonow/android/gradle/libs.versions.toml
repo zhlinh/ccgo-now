@@ -1,4 +1,6 @@
 [versions]
+# CCGO Gradle Build Logic Convention Plugins (com.mojeter.ccgo.gradle)
+ccgoBuildlogic = "0.0.18"
 # Third-party library versions
 accompanist = "0.34.0"
 androidDesugarJdkLibs = "2.0.4"
@@ -63,8 +65,6 @@ secrets = "2.0.1"
 truth = "1.4.2"
 turbine = "1.0.0"
 mavenNmcpPlugin = "1.2.0"
-# CCGO Gradle Build Logic Convention Plugins (com.mojeter.ccgo.gradle)
-ccgoBuildlogic = "0.0.18"
 
 [libraries]
 accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }

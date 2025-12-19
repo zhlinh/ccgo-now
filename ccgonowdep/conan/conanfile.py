@@ -10,7 +10,7 @@ class CcgonowdepConan(ConanFile):
     description = "ccgonowdep library"
     author = ""
     license = "MIT"
-    url = ""
+    url = "git@github.com:zhlinh/ccgonowdep.git"
 
     # Binary configuration
     settings = ['os', 'compiler', 'build_type', 'arch']
@@ -23,8 +23,33 @@ class CcgonowdepConan(ConanFile):
         "fPIC": True,
     }
 
-    # Sources are located in the same place as this recipe, copy them to the recipe
-    exports_sources = "CMakeLists.txt", "src/*", "include/*"
+    # Sources are located in parent directory relative to this recipe
+    # Conan 2.x doesn't support ".." in exports_sources, so we use export_sources() method
+    def export_sources(self):
+        # Get the project root directory (parent of conan/ directory)
+        project_root = os.path.normpath(os.path.join(self.recipe_folder, ".."))
+
+        # Copy CMakeLists.txt
+        copy(self, "CMakeLists.txt", src=project_root, dst=self.export_sources_folder)
+
+        # Copy include directory recursively
+        include_src = os.path.join(project_root, "include")
+        if os.path.exists(include_src):
+            copy(self, "*.h", src=include_src, dst=os.path.join(self.export_sources_folder, "include"), keep_path=True)
+            copy(self, "*.hpp", src=include_src, dst=os.path.join(self.export_sources_folder, "include"), keep_path=True)
+            copy(self, "*.hxx", src=include_src, dst=os.path.join(self.export_sources_folder, "include"), keep_path=True)
+
+        # Copy src directory recursively
+        src_src = os.path.join(project_root, "src")
+        if os.path.exists(src_src):
+            copy(self, "*.c", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(self, "*.cc", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(self, "*.cpp", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(self, "*.cxx", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(self, "*.h", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(self, "*.hpp", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(self, "*.mm", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(self, "*.m", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
 
     def config_options(self):
         if self.settings.os == "Windows":
@@ -81,10 +106,10 @@ class CcgonowdepConan(ConanFile):
             tc.variables["CCGO_BUILD_SHARED"] = "OFF"
         # Also set standard CMake variables for compatibility
         tc.variables["BUILD_SHARED_LIBS"] = "ON" if self.options.shared else "OFF"
-        tc.variables["COMM_BUILD_SHARED_LIBS"] = "ON" if self.options.shared else "OFF"
+        tc.variables["CCGO_BUILD_SHARED_LIBS"] = "ON" if self.options.shared else "OFF"
         # Set submodule dependencies for shared library linking
         # Format: "module1,dep1,dep2;module2,dep1" means module1 depends on dep1 and dep2
-        tc.variables["CONFIG_COMM_DEPS_MAP"] = self._detect_submodule_deps()
+        tc.variables["CCGO_CONFIG_DEPS_MAP"] = self._detect_submodule_deps()
         tc.generate()
 
         deps = CMakeDeps(self)
@@ -92,7 +117,7 @@ class CcgonowdepConan(ConanFile):
 
     def _detect_submodule_deps(self):
         """
-        Detect submodule dependencies by scanning source files for includes.
+        Get submodule dependencies from CCGO.toml config or auto-detect.
 
         Returns CMake list format: "module1;dep1,dep2;module2;dep3"
         where even indices are module names and odd indices are comma-separated deps.
@@ -100,7 +125,30 @@ class CcgonowdepConan(ConanFile):
         import os
         import re
 
+        # First check if submodule_deps is configured in CCGO.toml
+        # Format: {{ "api": ["base"], "feature": ["base", "utils"] }}
+        configured_deps = {'api': ['base']}
+        if configured_deps:
+            deps_map = []
+            for module, deps in configured_deps.items():
+                # Only process entries where deps is a list (actual dependencies)
+                # Skip non-list values like booleans, strings (other build config)
+                if isinstance(deps, list) and deps:
+                    deps_map.append(module)
+                    deps_map.append(",".join(deps))
+            result = ";".join(deps_map)
+            if result:
+                self.output.info(f"Using configured submodule dependencies: {{result}}")
+            return result
+
+        # Auto-detect by scanning source files
+        # If conanfile.py is in a subdirectory, source_folder points to that subdir
+        # We need to look in the parent directory for src/
         src_dir = os.path.join(self.source_folder, "src")
+        if not os.path.isdir(src_dir):
+            # Try parent directory (conanfile.py might be in conan/ subdirectory)
+            src_dir = os.path.join(self.source_folder, "..", "src")
+            src_dir = os.path.normpath(src_dir)
         if not os.path.isdir(src_dir):
             return ""
 
@@ -146,12 +194,19 @@ class CcgonowdepConan(ConanFile):
         # Format: "module1;dep1,dep2;module2;dep3"
         result = ";".join(deps_map)
         if result:
-            self.output.info(f"Detected submodule dependencies: {result}")
+            self.output.info(f"Auto-detected submodule dependencies: {{result}}")
         return result
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure()
+        # Dynamically detect CMakeLists.txt location for conan build vs conan create
+        import os
+        if not os.path.exists(os.path.join(self.source_folder, "CMakeLists.txt")):
+            # conan build scenario: CMakeLists.txt is in parent directory
+            cmake.configure(build_script_folder="..")
+        else:
+            # conan create scenario: CMakeLists.txt is in source folder
+            cmake.configure()
         cmake.build()
 
     def package(self):

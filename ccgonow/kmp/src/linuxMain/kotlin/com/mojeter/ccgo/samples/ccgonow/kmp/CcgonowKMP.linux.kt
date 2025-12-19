@@ -9,14 +9,14 @@ import ccgonow.*
  * This implementation uses Kotlin/Native cinterop to directly call C/C++ functions
  * without JNI overhead.
  */
-@OptIn(ExperimentalForeignApi::class)
+@OptIn(ExperimentalForeignApi::class, kotlin.experimental.ExperimentalNativeApi::class)
 actual class CcgonowKMP actual constructor() {
     actual fun setDebugLog(enable: Boolean) {
-        ccgonow_SetDebugLog(enable)
+        ccgonow_set_debug_log(enable)
     }
 
     actual fun getVersion(): String {
-        return ccgonow_GetVersion()?.toKString() ?: "Unknown"
+        return ccgonow_get_version()?.toKString() ?: "Unknown"
     }
 
     actual fun getPlatformName(): String {

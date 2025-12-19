@@ -6,6 +6,7 @@
 name = "ccgonow"
 version = "1.0.2"
 description = "ccgonow library"
+group_id = "com.mojecter.ccgo.samples"
 repository = "git@github.com:zhlinh/ccgonow.git"
 authors = ["zhlinh <zhlinhng@gmail.com>"]
 license = "MIT"
@@ -16,6 +17,11 @@ output_dir = "cmake_build"
 
 # Version info output path
 verinfo_path = "include/ccgonow/base/"
+
+# Symbol visibility for C/C++ symbols
+# false (default): hidden visibility - only explicitly exported symbols are visible
+# true: default visibility - all symbols are visible (useful for debugging)
+symbol_visibility = false
 
 # Generate JSON build metadata file
 generate_json_metadata = true
@@ -174,7 +180,7 @@ repo = "trunk"
 license = "MIT"
 
 # Homepage URL
-homepage = "https://github.com/zhlinh/ccgonow"
+homepage = "https://github.com/zhlinh/ccgo-now"
 
 # Use static framework linking (default: true)
 static_framework = true
@@ -189,7 +195,7 @@ dependencies = [
 enabled = true
 
 # Git URL for the package (defaults to git remote origin)
-git_url = "https://github.com/zhlinh/ccgonow"
+git_url = "https://github.com/zhlinh/ccgo-now"
 
 # Use local path instead of URL (for development)
 use_local_path = true
@@ -212,6 +218,49 @@ registry = "official"
 # OHPM dependencies
 dependencies = [
     { name = "ccgonowdep", version = "1.0.0" },
+]
+
+# ===================================================================
+# Conan Publish Configuration
+# ===================================================================
+# Configuration for publishing C/C++ packages to Conan.
+# Use: ccgo publish conan --registry local/official/private
+
+[publish.conan]
+# Package name (defaults to project name)
+name = "ccgonow"
+
+# User for Conan reference (name/version@user/channel)
+# Set to "" to disable user/channel
+group_id = "ccgo"
+
+# Channel: stable, testing, dev
+channel = "stable"
+
+# Conan dependencies
+dependencies = [
+    { name = "ccgonowdep", version = "1.0.0", user = "ccgo", channel = "stable" },
+]
+
+# ===================================================================
+# KMP Publish Configuration
+# ===================================================================
+# Configuration for publishing Kotlin Multiplatform libraries.
+# Use: ccgo publish kmp --registry local/central/custom
+
+[publish.kmp]
+# Maven group ID for KMP publishing
+group_id = "com.mojeter.ccgo.samples"
+
+# Android minSdk for KMP (can be different from native Android lib)
+android_min_sdk = 24
+
+# iOS deployment target
+ios_deployment_target = "14.0"
+
+# KMP dependencies for commonMain sourceSet
+dependencies = [
+    { group = "com.mojeter.ccgo.samples", artifact = "ccgonowdep-kmp", version = "1.0.0" },
 ]
 
 # ===================================================================

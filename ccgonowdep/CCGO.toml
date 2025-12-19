@@ -4,8 +4,9 @@
 
 [project]
 name = "ccgonowdep"
-version = "1.0.0"
+version = "1.0.1"
 description = "ccgonowdep library"
+group_id = "com.mojecter.ccgo.samples"
 repository = "git@github.com:zhlinh/ccgonowdep.git"
 authors = ["zhlinh <zhlinhng@gmail.com>"]
 license = "MIT"
@@ -17,6 +18,11 @@ output_dir = "cmake_build"
 # Version info output path
 verinfo_path = "include/ccgonowdep/base/"
 
+# Symbol visibility for C/C++ symbols
+# false (default): hidden visibility - only explicitly exported symbols are visible
+# true: default visibility - all symbols are visible (useful for debugging)
+symbol_visibility = false
+
 # Generate JSON build metadata file
 generate_json_metadata = true
 
@@ -25,6 +31,11 @@ json_metadata_path = "build_info.json"
 
 # CMake version
 cmake_version = "3.22.1"
+
+# Submodule internal dependencies for shared library linking
+# Format: module = ["dep1", "dep2"] means module depends on dep1 and dep2
+[build.submodule_deps]
+api = ["base"]
 
 [android]
 # Android project path
@@ -164,6 +175,35 @@ channel_desc = ""
 # Maven dependencies to include in POM file
 # No dependencies for this library
 dependencies = []
+
+
+[publish.ohos.ohpm]
+group_id = "ccgo"
+
+
+[publish.conan]
+group_id = "ccgo"
+
+
+# ===================================================================
+# KMP Publish Configuration
+# ===================================================================
+# Configuration for publishing Kotlin Multiplatform libraries.
+# Use: ccgo publish kmp --registry local/central/custom
+
+[publish.kmp]
+# Maven group ID for KMP publishing
+group_id = "com.mojeter.ccgo.samples"
+
+# Android minSdk for KMP (can be different from native Android lib)
+android_min_sdk = 24
+
+# iOS deployment target
+ios_deployment_target = "14.0"
+
+# KMP dependencies for commonMain sourceSet (none for this base library)
+dependencies = []
+
 
 # Optional Maven configuration (credentials should be in env vars or gradle.properties)
 # local_path = "~/.m2/repository"

@@ -2,6 +2,7 @@ package com.mojeter.ccgo.samples.ccgonowdep.kmp
 
 import kotlinx.cinterop.*
 import ccgonowdep.*
+import kotlin.experimental.ExperimentalNativeApi
 
 /**
  * Linux implementation of CcgonowdepKMP
@@ -9,14 +10,14 @@ import ccgonowdep.*
  * This implementation uses Kotlin/Native cinterop to directly call C/C++ functions
  * without JNI overhead.
  */
-@OptIn(ExperimentalForeignApi::class)
+@OptIn(ExperimentalForeignApi::class, ExperimentalNativeApi::class)
 actual class CcgonowdepKMP actual constructor() {
     actual fun setDebugLog(enable: Boolean) {
-        ccgonowdep_SetDebugLog(enable)
+        ccgonowdep_set_debug_log(enable)
     }
 
     actual fun getVersion(): String {
-        return ccgonowdep_GetVersion()?.toKString() ?: "Unknown"
+        return ccgonowdep_get_version()?.toKString() ?: "Unknown"
     }
 
     actual fun getPlatformName(): String {
