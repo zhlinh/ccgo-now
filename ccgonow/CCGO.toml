@@ -239,7 +239,7 @@ channel = "stable"
 
 # Conan dependencies
 dependencies = [
-    { name = "ccgonowdep", version = "1.0.0", user = "ccgo", channel = "stable" },
+    { name = "ccgonowdep", version = "1.0.1", user = "ccgo", channel = "stable" },
 ]
 
 # ===================================================================

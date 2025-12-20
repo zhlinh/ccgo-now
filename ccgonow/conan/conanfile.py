@@ -52,7 +52,7 @@ class CcgonowConan(ConanFile):
             copy(self, "*.m", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
 
     def requirements(self):
-        self.requires("ccgonowdep/1.0.0@ccgo/stable")
+        self.requires("ccgonowdep/1.0.1@ccgo/stable")
 
     def config_options(self):
         if self.settings.os == "Windows":
@@ -202,7 +202,14 @@ class CcgonowConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure()
+        # Dynamically detect CMakeLists.txt location for conan build vs conan create
+        import os
+        if not os.path.exists(os.path.join(self.source_folder, "CMakeLists.txt")):
+            # conan build scenario: CMakeLists.txt is in parent directory
+            cmake.configure(build_script_folder="..")
+        else:
+            # conan create scenario: CMakeLists.txt is in source folder
+            cmake.configure()
         cmake.build()
 
     def package(self):
