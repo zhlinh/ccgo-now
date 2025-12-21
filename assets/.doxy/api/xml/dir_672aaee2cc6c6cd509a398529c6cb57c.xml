@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_672aaee2cc6c6cd509a398529c6cb57c" kind="dir">
+    <compoundname>include/ccgonow/api/ohos</compoundname>
+    <innerfile refid="ccgonow__napi_8h">ccgonow_napi.h</innerfile>
+    <innerfile refid="ccgonow__napi__config_8h">ccgonow_napi_config.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ccgonow/api/ohos/"/>
+  </compounddef>
+</doxygen>

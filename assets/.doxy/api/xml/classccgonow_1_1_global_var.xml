@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classccgonow_1_1_global_var" kind="class" language="C++" prot="public">
+    <compoundname>ccgonow::GlobalVar</compoundname>
+    <includes refid="global__var_8h" local="no">global_var.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classccgonow_1_1_global_var_1a256bbabc5497af5d89d585c766e83599" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ccgonow::GlobalVar::debug_</definition>
+        <argsstring></argsstring>
+        <name>debug_</name>
+        <qualifiedname>ccgonow::GlobalVar::debug_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/global_var.h" line="40" column="8" bodyfile="include/ccgonow/base/global_var.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classccgonow_1_1_global_var_1ab527aa642f1c08a4337bac93153f060f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ccgonow::GlobalVar::GlobalVar</definition>
+        <argsstring>()=default</argsstring>
+        <name>GlobalVar</name>
+        <qualifiedname>ccgonow::GlobalVar::GlobalVar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/global_var.h" line="30" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classccgonow_1_1_global_var_1ad22813ec27e9e673a2a1c9d357acd88b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ccgonow::GlobalVar::~GlobalVar</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GlobalVar</name>
+        <qualifiedname>ccgonow::GlobalVar::~GlobalVar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/global_var.h" line="31" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classccgonow_1_1_global_var_1aa641cb8b567dc962d11ccdcfa57f5de1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ccgonow::GlobalVar::GlobalVar</definition>
+        <argsstring>(const GlobalVar &amp;)=delete</argsstring>
+        <name>GlobalVar</name>
+        <qualifiedname>ccgonow::GlobalVar::GlobalVar</qualifiedname>
+        <param>
+          <type>const <ref refid="classccgonow_1_1_global_var" kindref="compound">GlobalVar</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/global_var.h" line="32" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classccgonow_1_1_global_var_1a1e66d292fe2d13e1c2e112c7ac1e71a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classccgonow_1_1_global_var" kindref="compound">GlobalVar</ref> &amp;</type>
+        <definition>GlobalVar &amp; ccgonow::GlobalVar::operator=</definition>
+        <argsstring>(const GlobalVar &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>ccgonow::GlobalVar::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classccgonow_1_1_global_var" kindref="compound">GlobalVar</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/global_var.h" line="33" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classccgonow_1_1_global_var_1ae32d0dd6392f7f9f294206c23882c1f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classccgonow_1_1_global_var" kindref="compound">GlobalVar</ref> &amp;</type>
+        <definition>static GlobalVar &amp; ccgonow::GlobalVar::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>ccgonow::GlobalVar::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/global_var.h" line="36" column="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classccgonow_1_1_global_var_1a6f8b2d9eb22b651c1a92f5f48e578c53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ccgonow::GlobalVar::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <qualifiedname>ccgonow::GlobalVar::Clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/global_var.h" line="38" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ccgonow/base/global_var.h" line="28" column="1" bodyfile="include/ccgonow/base/global_var.h" bodystart="28" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classccgonow_1_1_global_var_1a6f8b2d9eb22b651c1a92f5f48e578c53" prot="public" virt="non-virtual"><scope>ccgonow::GlobalVar</scope><name>Clear</name></member>
+      <member refid="classccgonow_1_1_global_var_1a256bbabc5497af5d89d585c766e83599" prot="public" virt="non-virtual"><scope>ccgonow::GlobalVar</scope><name>debug_</name></member>
+      <member refid="classccgonow_1_1_global_var_1ae32d0dd6392f7f9f294206c23882c1f1" prot="public" virt="non-virtual"><scope>ccgonow::GlobalVar</scope><name>GetInstance</name></member>
+      <member refid="classccgonow_1_1_global_var_1ab527aa642f1c08a4337bac93153f060f" prot="private" virt="non-virtual"><scope>ccgonow::GlobalVar</scope><name>GlobalVar</name></member>
+      <member refid="classccgonow_1_1_global_var_1aa641cb8b567dc962d11ccdcfa57f5de1" prot="private" virt="non-virtual"><scope>ccgonow::GlobalVar</scope><name>GlobalVar</name></member>
+      <member refid="classccgonow_1_1_global_var_1a1e66d292fe2d13e1c2e112c7ac1e71a8" prot="private" virt="non-virtual"><scope>ccgonow::GlobalVar</scope><name>operator=</name></member>
+      <member refid="classccgonow_1_1_global_var_1ad22813ec27e9e673a2a1c9d357acd88b" prot="private" virt="non-virtual"><scope>ccgonow::GlobalVar</scope><name>~GlobalVar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

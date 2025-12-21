@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="verinfo_8h" kind="file" language="C++">
+    <compoundname>verinfo.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="verinfo_8h_1a3fc076bcdf3638ffe32b55e6f7ded202" prot="public" static="no">
+        <name>CCGO_CCGONOW_VERSION</name>
+        <initializer>&quot;1.0.2&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="11" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1a3e5ddbb74e9956b1a6b4222ed23bf4c8" prot="public" static="no">
+        <name>CCGO_CCGONOW_REVISION</name>
+        <initializer>&quot;ac2c0ad&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="12" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1a61bc084b37a36444ee956dface727947" prot="public" static="no">
+        <name>CCGO_CCGONOW_PATH</name>
+        <initializer>&quot;master&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="13" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1a28b77a2f87df9c188114e24b25837688" prot="public" static="no">
+        <name>CCGO_CCGONOW_URL</name>
+        <initializer>&quot;/zh***/ccgo-now.git&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="14" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1af7aaeb1de6df41600606cd25429c20ca" prot="public" static="no">
+        <name>CCGO_CCGONOW_BUILD_TIME</name>
+        <initializer>&quot;2025-12-21 23:12:13&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="15" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1a912baa950f3e1c734958fe9ed11fcafd" prot="public" static="no">
+        <name>CCGO_CCGONOW_TAG</name>
+        <initializer>&quot;v1.0.1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="16" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1a81a538dfcb107788fd6b582dba3e7a5c" prot="public" static="no">
+        <name>CCGO_CCGONOW_ANDROID_STL</name>
+        <initializer>&quot;c++_shared&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="17" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1afa7f1e52d93bb31e3ad181b50261a37d" prot="public" static="no">
+        <name>CCGO_CCGONOW_ANDROID_NDK_VERSION</name>
+        <initializer>&quot;25.2.9519653&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="18" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="verinfo_8h_1a0d7fa38d0b0ce0be11312e1f7ec92d74" prot="public" static="no">
+        <name>CCGO_CCGONOW_ANDROID_MIN_SDK_VERSION</name>
+        <initializer>&quot;19&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ccgonow/base/verinfo.h" line="19" column="9" bodyfile="include/ccgonow/base/verinfo.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>verinfo.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>include/ccgonow/base/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>by<sp/>ccgo<sp/>on<sp/>2025-12-21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>2025<sp/>ccgo<sp/>Project<sp/>Authors.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CCGONOW_BASE_VERINFO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGONOW_BASE_VERINFO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="verinfo_8h_1a3fc076bcdf3638ffe32b55e6f7ded202" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_VERSION<sp/>&quot;1.0.2&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="verinfo_8h_1a3e5ddbb74e9956b1a6b4222ed23bf4c8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_REVISION<sp/>&quot;ac2c0ad&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="verinfo_8h_1a61bc084b37a36444ee956dface727947" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_PATH<sp/>&quot;master&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="verinfo_8h_1a28b77a2f87df9c188114e24b25837688" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_URL<sp/>&quot;/zh***/ccgo-now.git&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="verinfo_8h_1af7aaeb1de6df41600606cd25429c20ca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_BUILD_TIME<sp/>&quot;2025-12-21<sp/>23:12:13&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="verinfo_8h_1a912baa950f3e1c734958fe9ed11fcafd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_TAG<sp/>&quot;v1.0.1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="verinfo_8h_1a81a538dfcb107788fd6b582dba3e7a5c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_ANDROID_STL<sp/>&quot;c++_shared&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="verinfo_8h_1afa7f1e52d93bb31e3ad181b50261a37d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_ANDROID_NDK_VERSION<sp/>&quot;25.2.9519653&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="verinfo_8h_1a0d7fa38d0b0ce0be11312e1f7ec92d74" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CCGO_CCGONOW_ANDROID_MIN_SDK_VERSION<sp/>&quot;19&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>CCGONOW_BASE_VERINFO_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/ccgonow/base/verinfo.h"/>
+  </compounddef>
+</doxygen>

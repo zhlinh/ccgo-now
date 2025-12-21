@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="classccgonow_1_1_global_var" kind="class"><name>ccgonow::GlobalVar</name>
+    <member refid="classccgonow_1_1_global_var_1a256bbabc5497af5d89d585c766e83599" kind="variable"><name>debug_</name></member>
+    <member refid="classccgonow_1_1_global_var_1ab527aa642f1c08a4337bac93153f060f" kind="function"><name>GlobalVar</name></member>
+    <member refid="classccgonow_1_1_global_var_1ad22813ec27e9e673a2a1c9d357acd88b" kind="function"><name>~GlobalVar</name></member>
+    <member refid="classccgonow_1_1_global_var_1aa641cb8b567dc962d11ccdcfa57f5de1" kind="function"><name>GlobalVar</name></member>
+    <member refid="classccgonow_1_1_global_var_1a1e66d292fe2d13e1c2e112c7ac1e71a8" kind="function"><name>operator=</name></member>
+    <member refid="classccgonow_1_1_global_var_1ae32d0dd6392f7f9f294206c23882c1f1" kind="function"><name>GetInstance</name></member>
+    <member refid="classccgonow_1_1_global_var_1a6f8b2d9eb22b651c1a92f5f48e578c53" kind="function"><name>Clear</name></member>
+  </compound>
+  <compound refid="namespaceccgonow" kind="namespace"><name>ccgonow</name>
+  </compound>
+  <compound refid="ccgonow__jni_8h" kind="file"><name>ccgonow_jni.h</name>
+  </compound>
+  <compound refid="ccgonow__jni__config_8h" kind="file"><name>ccgonow_jni_config.h</name>
+  </compound>
+  <compound refid="apple_2_ccgonow_8h" kind="file"><name>Ccgonow.h</name>
+    <member refid="group__i_o_s_1ga2491a016d3696dceb8aab3a30ac731f6" kind="function"><name>ccgonow_set_debug_log</name></member>
+    <member refid="group__i_o_s_1gaa4c9642fc7cc6d8a348801870280cefa" kind="function"><name>ccgonow_get_version</name></member>
+  </compound>
+  <compound refid="native_2_ccgonow_8h" kind="file"><name>ccgonow.h</name>
+    <member refid="native_2_ccgonow_8h_1a8ce56dfd1a20be99bec3a5e34496f048" kind="define"><name>COMM_PUBLIC</name></member>
+    <member refid="native_2_ccgonow_8h_1acb187d50eb69c3e0de66589131e9c23c" kind="function"><name>ccgonow_SetDebugLog</name></member>
+    <member refid="native_2_ccgonow_8h_1af370eea4aa433be6e83cbf505809c2de" kind="function"><name>ccgonow_GetVersion</name></member>
+  </compound>
+  <compound refid="ccgonow__napi_8h" kind="file"><name>ccgonow_napi.h</name>
+  </compound>
+  <compound refid="ccgonow__napi__config_8h" kind="file"><name>ccgonow_napi_config.h</name>
+  </compound>
+  <compound refid="global__var_8h" kind="file"><name>global_var.h</name>
+    <member refid="global__var_8h_1a9ca862536b7a48f33b29310624a6a8d9" kind="define"><name>CCGONOW_GV</name></member>
+    <member refid="global__var_8h_1aba8aeee3c853215b769133628a092314" kind="define"><name>CCGONOW_DEBUG</name></member>
+  </compound>
+  <compound refid="verinfo_8h" kind="file"><name>verinfo.h</name>
+    <member refid="verinfo_8h_1a3fc076bcdf3638ffe32b55e6f7ded202" kind="define"><name>CCGO_CCGONOW_VERSION</name></member>
+    <member refid="verinfo_8h_1a3e5ddbb74e9956b1a6b4222ed23bf4c8" kind="define"><name>CCGO_CCGONOW_REVISION</name></member>
+    <member refid="verinfo_8h_1a61bc084b37a36444ee956dface727947" kind="define"><name>CCGO_CCGONOW_PATH</name></member>
+    <member refid="verinfo_8h_1a28b77a2f87df9c188114e24b25837688" kind="define"><name>CCGO_CCGONOW_URL</name></member>
+    <member refid="verinfo_8h_1af7aaeb1de6df41600606cd25429c20ca" kind="define"><name>CCGO_CCGONOW_BUILD_TIME</name></member>
+    <member refid="verinfo_8h_1a912baa950f3e1c734958fe9ed11fcafd" kind="define"><name>CCGO_CCGONOW_TAG</name></member>
+    <member refid="verinfo_8h_1a81a538dfcb107788fd6b582dba3e7a5c" kind="define"><name>CCGO_CCGONOW_ANDROID_STL</name></member>
+    <member refid="verinfo_8h_1afa7f1e52d93bb31e3ad181b50261a37d" kind="define"><name>CCGO_CCGONOW_ANDROID_NDK_VERSION</name></member>
+    <member refid="verinfo_8h_1a0d7fa38d0b0ce0be11312e1f7ec92d74" kind="define"><name>CCGO_CCGONOW_ANDROID_MIN_SDK_VERSION</name></member>
+  </compound>
+  <compound refid="group__i_o_s" kind="group"><name>iOS</name>
+    <member refid="group__i_o_s_1ga2491a016d3696dceb8aab3a30ac731f6" kind="function"><name>ccgonow_set_debug_log</name></member>
+    <member refid="group__i_o_s_1gaa4c9642fc7cc6d8a348801870280cefa" kind="function"><name>ccgonow_get_version</name></member>
+  </compound>
+  <compound refid="dir_04f6ed7d9051d8e87a45204db12b1e43" kind="dir"><name>include/ccgonow/api/android</name>
+  </compound>
+  <compound refid="dir_639c03aaf15c5be465216d96238b2517" kind="dir"><name>include/ccgonow/api</name>
+  </compound>
+  <compound refid="dir_171b0d972e5e4bd4ddb0095a1963a782" kind="dir"><name>include/ccgonow/api/apple</name>
+  </compound>
+  <compound refid="dir_482280009f5309bf53c388bad7729fe8" kind="dir"><name>include/ccgonow/base</name>
+  </compound>
+  <compound refid="dir_59a37b092a3c959b31814e5c8a04b298" kind="dir"><name>include/ccgonow</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_75eae66b30959e73daa92e063f248b66" kind="dir"><name>include/ccgonow/api/native</name>
+  </compound>
+  <compound refid="dir_672aaee2cc6c6cd509a398529c6cb57c" kind="dir"><name>include/ccgonow/api/ohos</name>
+  </compound>
+</doxygenindex>

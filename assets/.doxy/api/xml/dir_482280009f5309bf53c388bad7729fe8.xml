@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_482280009f5309bf53c388bad7729fe8" kind="dir">
+    <compoundname>include/ccgonow/base</compoundname>
+    <innerfile refid="global__var_8h">global_var.h</innerfile>
+    <innerfile refid="verinfo_8h">verinfo.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ccgonow/base/"/>
+  </compounddef>
+</doxygen>

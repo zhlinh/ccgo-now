@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_04f6ed7d9051d8e87a45204db12b1e43" kind="dir">
+    <compoundname>include/ccgonow/api/android</compoundname>
+    <innerfile refid="ccgonow__jni_8h">ccgonow_jni.h</innerfile>
+    <innerfile refid="ccgonow__jni__config_8h">ccgonow_jni_config.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ccgonow/api/android/"/>
+  </compounddef>
+</doxygen>

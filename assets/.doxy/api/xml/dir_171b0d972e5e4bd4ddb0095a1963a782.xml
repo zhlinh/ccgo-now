@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_171b0d972e5e4bd4ddb0095a1963a782" kind="dir">
+    <compoundname>include/ccgonow/api/apple</compoundname>
+    <innerfile refid="apple_2_ccgonow_8h">Ccgonow.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ccgonow/api/apple/"/>
+  </compounddef>
+</doxygen>
