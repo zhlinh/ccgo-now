@@ -11,8 +11,8 @@ build:
     - doxygen
 
 mkdocs:
-  configuration: mkdocs.yml
+  configuration: ccgonow/mkdocs.yml
 
 python:
   install:
-    - requirements: docs/requirements.txt
+    - requirements: ccgonow/docs/requirements.txt
