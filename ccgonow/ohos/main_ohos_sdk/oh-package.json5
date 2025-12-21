@@ -1,6 +1,7 @@
 {
   name: "@ccgo/ccgonow",
   version: "1.0.2",
+  bundleName: "com.ccgo.ccgonow",
   description: "Ccgonow library for OpenHarmony",
   keywords: ["ccgo"],
   homepage: "https://github.com/zhlinh/ccgo-now/tree/master/ccgonow",

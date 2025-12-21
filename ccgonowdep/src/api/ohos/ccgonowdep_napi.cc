@@ -7,12 +7,13 @@
 
 #ifdef __OHOS__
 
-#  include "ccgonowdep/api/ohos/ccgonowdep_napi.h"
-#  include "ccgonowdep/api/native/ccgonowdep.h"
+#include "ccgonowdep/api/ohos/ccgonowdep_napi.h"
 
-#  include <cstdint>
-#  include <memory>
-#  include <string>
+#include <cstdint>
+#include <memory>
+#include <string>
+
+#include "ccgonowdep/api/native/ccgonowdep.h"
 
 namespace {
 
@@ -51,7 +52,8 @@ napi_value NapiCcgonowdepSetDebugLog(napi_env env, napi_callback_info info) {
 EXTERN_C_START
 static napi_value Init(napi_env env, napi_value exports) {
   napi_property_descriptor desc[] = {
-    { "setDebugLog", nullptr, NapiCcgonowdepSetDebugLog, nullptr, nullptr, nullptr, napi_default, nullptr },
+      {"setDebugLog", nullptr, NapiCcgonowdepSetDebugLog, nullptr, nullptr,
+       nullptr, napi_default, nullptr},
   };
 
   napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
@@ -61,13 +63,13 @@ EXTERN_C_END
 
 // 模块定义
 static napi_module ccgonowdepModule = {
-  .nm_version = 1,
-  .nm_flags = 0,
-  .nm_filename = nullptr,
-  .nm_register_func = Init,
-  .nm_modname = "Ccgonowdep",
-  .nm_priv = ((void*)0),
-  .reserved = { 0 },
+    .nm_version = 1,
+    .nm_flags = 0,
+    .nm_filename = nullptr,
+    .nm_register_func = Init,
+    .nm_modname = "Ccgonowdep",
+    .nm_priv = ((void*)0),
+    .reserved = {0},
 };
 
 // 模块注册

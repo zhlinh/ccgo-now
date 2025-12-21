@@ -10,24 +10,24 @@
 
 #ifdef __ANDROID__
 
-#  include <jni.h>
+#include <jni.h>
 
-#  include <string>
+#include <string>
 #
-#  include "ccgonowdep/api/android/ccgonowdep_jni_config.h"
+#include "ccgonowdep/api/android/ccgonowdep_jni_config.h"
 
-#  ifdef __cplusplus
+#ifdef __cplusplus
 extern "C" {
-#  endif
+#endif
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved);
 
-JNIEXPORT void JNICALL CCGONOWDEP_JNI_API_DEF(setDebugLog)(JNIEnv *env, jclass cls, jboolean is_debug_log);
+JNIEXPORT void JNICALL CCGONOWDEP_JNI_API_DEF(setDebugLog)(
+    JNIEnv *env, jclass cls, jboolean is_debug_log);
 
-
-#  ifdef __cplusplus
+#ifdef __cplusplus
 }
-#  endif
+#endif
 
 #endif  // __ANDROID__
 

@@ -8,14 +8,14 @@
 package com.mojeter.ccgo.samples.ccgonowdep.jni;
 
 public class CcgonowdepJni {
-    static {
-        try {
-            System.loadLibrary("c++_shared");
-            System.loadLibrary("libccgonowdep");
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
+  static {
+    try {
+      System.loadLibrary("c++_shared");
+      System.loadLibrary("libccgonowdep");
+    } catch (Throwable e) {
+      e.printStackTrace();
     }
+  }
 
-    public static native void setDebugLog(boolean isDebugLog);
+  public static native void setDebugLog(boolean isDebugLog);
 }

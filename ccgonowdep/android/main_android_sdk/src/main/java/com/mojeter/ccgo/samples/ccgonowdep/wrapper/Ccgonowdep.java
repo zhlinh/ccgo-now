@@ -29,44 +29,34 @@ import com.mojeter.ccgo.samples.ccgonowdep.jni.CcgonowdepJni;
  */
 
 /**
- * \if ZH-CN
- * \brief 通用库java接口类
+ * \if ZH-CN \brief 通用库java接口类
  *
- * @author ccgo
- *         \else
- *         \brief ccgonowdep common java api class.
- *
- * @author ccgo
- *         \endif
+ * @author ccgo \else \brief ccgonowdep common java api class.
+ * @author ccgo \endif
  */
 public class Ccgonowdep {
-    // -----------------------------------------------------------------------------
-    // ! \name ccgonowdep-base
-    // ! @{
-    // -----------------------------------------------------------------------------
-    static {
-        System.loadLibrary("c++_shared");
-    }
+  // -----------------------------------------------------------------------------
+  // ! \name ccgonowdep-base
+  // ! @{
+  // -----------------------------------------------------------------------------
+  static {
+    System.loadLibrary("c++_shared");
+  }
 
-    /**
-     * \if ZH-CN
-     * \brief 设置debug log
-     *
-     * @param isDebugLog 是否打印日志
-     *                   \else
-     *                   \brief set debug log.
-     *
-     * @param isDebugLog the debug log
-     *                   \endif
-     */
-    public static void setDebugLog(boolean isDebugLog) {
-        CcgonowdepJni.setDebugLog(isDebugLog);
-    }
+  /**
+   * \if ZH-CN \brief 设置debug log
+   *
+   * @param isDebugLog 是否打印日志 \else \brief set debug log.
+   * @param isDebugLog the debug log \endif
+   */
+  public static void setDebugLog(boolean isDebugLog) {
+    CcgonowdepJni.setDebugLog(isDebugLog);
+  }
 
-    // -----------------------------------------------------------------------------
-    // endregion
-    // ! @} // end name ccgonowdep-base
-    // -----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------
+  // endregion
+  // ! @} // end name ccgonowdep-base
+  // -----------------------------------------------------------------------------
 }
 
 /* ! @} */

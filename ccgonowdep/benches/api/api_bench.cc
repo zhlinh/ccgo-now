@@ -5,12 +5,11 @@
 // Created by ccgo on 2025-11-30.
 // Copyright 2025 ccgo Project Authors. All rights reserved.
 
-#include "ccgonowdep/api/native/ccgonowdep.h"
-
 #include <string>
 #include <vector>
 
 #include "benchmark/benchmark.h"
+#include "ccgonowdep/api/native/ccgonowdep.h"
 
 namespace ccgonowdep {
 
@@ -25,7 +24,7 @@ void AddNum1(int* a, int* b, int* result, int size) {
 void AddNum2(int* a, int* b, int* result, int size) {
   for (int i = 0; i < size; i += 2) {
     result[i] = a[i] + b[i];
-    if (i+1 < size) result[i+1] = a[i+1] + b[i+1];
+    if (i + 1 < size) result[i + 1] = a[i + 1] + b[i + 1];
   }
 }
 

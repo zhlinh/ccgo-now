@@ -10,15 +10,16 @@
 
 #ifdef __ANDROID__
 
-#  ifndef CCGONOWDEP_JNI_API_PREFIX
-#    define CCGONOWDEP_JNI_API_PREFIX Java_com_mojeter_ccgo_ccgonowdep_jni_CcgonowdepJni_
-#  endif
+#ifndef CCGONOWDEP_JNI_API_PREFIX
+#define CCGONOWDEP_JNI_API_PREFIX \
+  Java_com_mojeter_ccgo_ccgonowdep_jni_CcgonowdepJni_
+#endif
 
 // the following two macros are utility macros to concatenate two macros
-#  define _TOOLS_CONCAT(a, b) a##b
-#  define TOOLS_CONCAT(a, b) _TOOLS_CONCAT(a, b)
+#define _TOOLS_CONCAT(a, b) a##b
+#define TOOLS_CONCAT(a, b) _TOOLS_CONCAT(a, b)
 
-#  define CCGONOWDEP_JNI_API_DEF(f) TOOLS_CONCAT(CCGONOWDEP_JNI_API_PREFIX, f)
+#define CCGONOWDEP_JNI_API_DEF(f) TOOLS_CONCAT(CCGONOWDEP_JNI_API_PREFIX, f)
 
 #endif  // __ANDROID__
 

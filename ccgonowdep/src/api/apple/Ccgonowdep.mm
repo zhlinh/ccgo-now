@@ -12,10 +12,6 @@
 // C API implementations for Kotlin/Native cinterop
 //-----------------------------------------------------------------------------
 
-void ccgonowdep_set_debug_log(bool enable) {
-    ccgonowdep_SetDebugLog(enable);
-}
+void ccgonowdep_set_debug_log(bool enable) { ccgonowdep_SetDebugLog(enable); }
 
-const char* ccgonowdep_get_version(void) {
-    return ccgonowdep_GetVersion();
-}
+const char* ccgonowdep_get_version(void) { return ccgonowdep_GetVersion(); }

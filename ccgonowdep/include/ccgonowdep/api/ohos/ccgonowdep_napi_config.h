@@ -11,14 +11,14 @@
 #ifdef __OHOS__
 
 // NAPI模块名称定义
-#  ifndef CCGONOWDEP_NAPI_MODULE_NAME
-#    define CCGONOWDEP_NAPI_MODULE_NAME "Ccgonowdep"
-#  endif
+#ifndef CCGONOWDEP_NAPI_MODULE_NAME
+#define CCGONOWDEP_NAPI_MODULE_NAME "Ccgonowdep"
+#endif
 
 // NAPI版本定义
-#  ifndef CCGONOWDEP_NAPI_VERSION
-#    define CCGONOWDEP_NAPI_VERSION 1
-#  endif
+#ifndef CCGONOWDEP_NAPI_VERSION
+#define CCGONOWDEP_NAPI_VERSION 1
+#endif
 
 #endif  // __OHOS__
 

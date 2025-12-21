@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = 'ccgonow'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'ccgonow library'
-  s.homepage         = 'https://github.com/zhlinh/ccgonow'
+  s.homepage         = 'https://github.com/zhlinh/ccgo-now'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = 'zhlinh'
   # Binary distribution: download xcframework zip from GitHub releases
@@ -11,9 +11,13 @@ Pod::Spec.new do |s|
   # s.source           = { :git => 'https://github.com/zhlinh/ccgo-now.git', :tag => 'v' + s.version.to_s }
   s.ios.deployment_target = '13.0'
   s.osx.deployment_target = '10.15'
+  s.tvos.deployment_target = '13.0'
+  s.watchos.deployment_target = '6.0'
   s.swift_version    = '5.0'
   s.ios.vendored_frameworks = 'ios/ccgonow.xcframework'
   s.osx.vendored_frameworks = 'macos/ccgonow.framework'
+  s.tvos.vendored_frameworks = 'tvos/ccgonow.xcframework'
+  s.watchos.vendored_frameworks = 'watchos/ccgonow.xcframework'
   s.libraries        = 'c++'
   s.pod_target_xcconfig = {
     'CLANG_CXX_LANGUAGE_STANDARD' => 'c++17',

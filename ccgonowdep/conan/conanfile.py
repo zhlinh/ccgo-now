@@ -13,7 +13,7 @@ class CcgonowdepConan(ConanFile):
     url = "git@github.com:zhlinh/ccgonowdep.git"
 
     # Binary configuration
-    settings = ['os', 'compiler', 'build_type', 'arch']
+    settings = ["os", "compiler", "build_type", "arch"]
     options = {
         "shared": [True, False],
         "fPIC": [True, False],
@@ -30,26 +30,97 @@ class CcgonowdepConan(ConanFile):
         project_root = os.path.normpath(os.path.join(self.recipe_folder, ".."))
 
         # Copy CMakeLists.txt
-        copy(self, "CMakeLists.txt", src=project_root, dst=self.export_sources_folder)
+        copy(
+            self,
+            "CMakeLists.txt",
+            src=project_root,
+            dst=self.export_sources_folder,
+        )
 
         # Copy include directory recursively
         include_src = os.path.join(project_root, "include")
         if os.path.exists(include_src):
-            copy(self, "*.h", src=include_src, dst=os.path.join(self.export_sources_folder, "include"), keep_path=True)
-            copy(self, "*.hpp", src=include_src, dst=os.path.join(self.export_sources_folder, "include"), keep_path=True)
-            copy(self, "*.hxx", src=include_src, dst=os.path.join(self.export_sources_folder, "include"), keep_path=True)
+            copy(
+                self,
+                "*.h",
+                src=include_src,
+                dst=os.path.join(self.export_sources_folder, "include"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.hpp",
+                src=include_src,
+                dst=os.path.join(self.export_sources_folder, "include"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.hxx",
+                src=include_src,
+                dst=os.path.join(self.export_sources_folder, "include"),
+                keep_path=True,
+            )
 
         # Copy src directory recursively
         src_src = os.path.join(project_root, "src")
         if os.path.exists(src_src):
-            copy(self, "*.c", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
-            copy(self, "*.cc", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
-            copy(self, "*.cpp", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
-            copy(self, "*.cxx", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
-            copy(self, "*.h", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
-            copy(self, "*.hpp", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
-            copy(self, "*.mm", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
-            copy(self, "*.m", src=src_src, dst=os.path.join(self.export_sources_folder, "src"), keep_path=True)
+            copy(
+                self,
+                "*.c",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.cc",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.cpp",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.cxx",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.h",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.hpp",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.mm",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
+            copy(
+                self,
+                "*.m",
+                src=src_src,
+                dst=os.path.join(self.export_sources_folder, "src"),
+                keep_path=True,
+            )
 
     def config_options(self):
         if self.settings.os == "Windows":
@@ -72,6 +143,7 @@ class CcgonowdepConan(ConanFile):
         # Try to find from ccgo package installation
         try:
             import ccgo.build_scripts.build_utils as build_utils
+
             if hasattr(build_utils, "CCGO_CMAKE_DIR") and os.path.isdir(build_utils.CCGO_CMAKE_DIR):
                 return build_utils.CCGO_CMAKE_DIR
         except ImportError:
@@ -80,6 +152,7 @@ class CcgonowdepConan(ConanFile):
         # Try to find ccgo package location
         try:
             import ccgo
+
             ccgo_path = os.path.dirname(ccgo.__file__)
             cmake_dir = os.path.join(ccgo_path, "build_scripts", "cmake")
             if os.path.isdir(cmake_dir):
@@ -127,7 +200,7 @@ class CcgonowdepConan(ConanFile):
 
         # First check if submodule_deps is configured in CCGO.toml
         # Format: {{ "api": ["base"], "feature": ["base", "utils"] }}
-        configured_deps = {'api': ['base']}
+        configured_deps = {"api": ["base"]}
         if configured_deps:
             deps_map = []
             for module, deps in configured_deps.items():
@@ -156,7 +229,7 @@ class CcgonowdepConan(ConanFile):
         submodules = []
         for item in os.listdir(src_dir):
             subdir = os.path.join(src_dir, item)
-            if os.path.isdir(subdir) and not item.startswith('.'):
+            if os.path.isdir(subdir) and not item.startswith("."):
                 submodules.append(item)
 
         if not submodules:
@@ -173,10 +246,26 @@ class CcgonowdepConan(ConanFile):
             # Scan all source files in this module
             for root, dirs, files in os.walk(module_dir):
                 for filename in files:
-                    if filename.endswith(('.c', '.cc', '.cpp', '.cxx', '.mm', '.m', '.h', '.hpp')):
+                    if filename.endswith(
+                        (
+                            ".c",
+                            ".cc",
+                            ".cpp",
+                            ".cxx",
+                            ".mm",
+                            ".m",
+                            ".h",
+                            ".hpp",
+                        )
+                    ):
                         filepath = os.path.join(root, filename)
                         try:
-                            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                            with open(
+                                filepath,
+                                "r",
+                                encoding="utf-8",
+                                errors="ignore",
+                            ) as f:
                                 content = f.read()
                                 matches = include_pattern.findall(content)
                                 for match in matches:
@@ -201,6 +290,7 @@ class CcgonowdepConan(ConanFile):
         cmake = CMake(self)
         # Dynamically detect CMakeLists.txt location for conan build vs conan create
         import os
+
         if not os.path.exists(os.path.join(self.source_folder, "CMakeLists.txt")):
             # conan build scenario: CMakeLists.txt is in parent directory
             cmake.configure(build_script_folder="..")

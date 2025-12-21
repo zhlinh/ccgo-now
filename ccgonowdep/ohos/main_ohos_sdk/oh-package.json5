@@ -1,6 +1,7 @@
 {
   name: "@ccgo/ccgonowdep",
   version: "1.0.1",
+  bundleName: "com.ccgo.ccgonowdep",
   description: "Ccgonowdep library for OpenHarmony",
   keywords: ["ccgo"],
   homepage: "https://github.com/zhlinh/ccgo-now/tree/master/ccgonowdep",

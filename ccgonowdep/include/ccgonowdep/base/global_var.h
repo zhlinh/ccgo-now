@@ -17,7 +17,7 @@
 #include <vector>
 
 #ifdef __ANDROID__
-#  include <jni.h>
+#include <jni.h>
 #endif
 
 namespace ccgonowdep {

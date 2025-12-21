@@ -10,10 +10,7 @@
 #include "ccgonowdep/base/global_var.h"
 
 void ccgonowdep_SetDebugLog(bool is_debug_log) {
-    ccgonowdep::GlobalVar::GetInstance().debug_ = is_debug_log;
+  ccgonowdep::GlobalVar::GetInstance().debug_ = is_debug_log;
 }
 
-const char* ccgonowdep_GetVersion(void) {
-    return "1.0.0";
-}
-
+const char* ccgonowdep_GetVersion(void) { return "1.0.0"; }

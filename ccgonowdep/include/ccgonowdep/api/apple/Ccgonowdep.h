@@ -73,6 +73,6 @@ const char* ccgonowdep_get_version(void);
 }
 #endif
 
-#endif // CCGONOWDEP_APPLE_H
+#endif  // CCGONOWDEP_APPLE_H
 
 //!  @}  // end group iOS

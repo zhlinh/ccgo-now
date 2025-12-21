@@ -7,11 +7,12 @@
 
 #ifdef __ANDROID__
 
-#  include "ccgonowdep/api/android/ccgonowdep_jni.h"
-#  include "ccgonowdep/api/native/ccgonowdep.h"
+#include "ccgonowdep/api/android/ccgonowdep_jni.h"
 
-#  include <cstdint>
-#  include <memory>
+#include <cstdint>
+#include <memory>
+
+#include "ccgonowdep/api/native/ccgonowdep.h"
 
 // Only define JNI_OnLoad when building as standalone library
 // When used as a CCGO dependency, the main library will define JNI_OnLoad
@@ -24,7 +25,8 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
 }
 #endif  // CCGO_AS_DEPENDENCY
 
-JNIEXPORT void JNICALL CCGONOWDEP_JNI_API_DEF(setDebugLog)(JNIEnv *env, jclass cls, jboolean is_debug_log) {
+JNIEXPORT void JNICALL CCGONOWDEP_JNI_API_DEF(setDebugLog)(
+    JNIEnv *env, jclass cls, jboolean is_debug_log) {
   (void)env;
   (void)cls;
   ccgonowdep_SetDebugLog(is_debug_log);

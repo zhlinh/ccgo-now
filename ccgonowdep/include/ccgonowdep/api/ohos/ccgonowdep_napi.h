@@ -10,15 +10,15 @@
 
 #ifdef __OHOS__
 
-#  include <napi/native_api.h>
+#include <napi/native_api.h>
 
-#  include <string>
+#include <string>
 #
-#  include "ccgonowdep/api/ohos/ccgonowdep_napi_config.h"
+#include "ccgonowdep/api/ohos/ccgonowdep_napi_config.h"
 
-#  ifdef __cplusplus
+#ifdef __cplusplus
 extern "C" {
-#  endif
+#endif
 
 //! \if ZH-CN
 //! \brief 设置调试日志
@@ -35,10 +35,9 @@ extern "C" {
 //! \endif
 napi_value NapiCcgonowdepSetDebugLog(napi_env env, napi_callback_info info);
 
-
-#  ifdef __cplusplus
+#ifdef __cplusplus
 }
-#  endif
+#endif
 
 #endif  // __OHOS__
 

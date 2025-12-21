@@ -17,32 +17,32 @@ extern "C" {
 #ifndef COMM_PUBLIC
 // this is for non-project use, no need to define COMM_PUBLIC
 // or windows will add __imp_ prefix when searching for symbols
-#  if defined(COMM_ENABLE_EXPORTS) && COMM_ENABLE_EXPORTS == 1
-#    if defined _WIN32 || defined __CYGWIN__
-#      ifdef BUILDING_DLL
-#        ifdef __GNUC__
-#          define COMM_PUBLIC __attribute__((dllexport))
-#        else
-#          define COMM_PUBLIC __declspec(dllexport)
-#        endif
-#      else
-#        ifdef __GNUC__
-#          define COMM_PUBLIC __attribute__((dllimport))
-#        else
-#          define COMM_PUBLIC __declspec(dllimport)
-#        endif
-#      endif
-#    else
-#      if defined(__clang__) || (defined(__GNUC__) && __GNUC__ >= 4)
-#        define COMM_PUBLIC __attribute__((visibility("default")))
-#      else
-#        define COMM_PUBLIC
-#      endif
-#    endif
-#  else
-#    define COMM_PUBLIC
-#  endif  // defined(COMM_ENABLE_EXPORTS) && COMM_ENABLE_EXPORTS == 1
-#endif    // #ifndef (COMM_PUBLIC)
+#if defined(COMM_ENABLE_EXPORTS) && COMM_ENABLE_EXPORTS == 1
+#if defined _WIN32 || defined __CYGWIN__
+#ifdef BUILDING_DLL
+#ifdef __GNUC__
+#define COMM_PUBLIC __attribute__((dllexport))
+#else
+#define COMM_PUBLIC __declspec(dllexport)
+#endif
+#else
+#ifdef __GNUC__
+#define COMM_PUBLIC __attribute__((dllimport))
+#else
+#define COMM_PUBLIC __declspec(dllimport)
+#endif
+#endif
+#else
+#if defined(__clang__) || (defined(__GNUC__) && __GNUC__ >= 4)
+#define COMM_PUBLIC __attribute__((visibility("default")))
+#else
+#define COMM_PUBLIC
+#endif
+#endif
+#else
+#define COMM_PUBLIC
+#endif  // defined(COMM_ENABLE_EXPORTS) && COMM_ENABLE_EXPORTS == 1
+#endif  // #ifndef (COMM_PUBLIC)
 
 //! \if ZH-CN
 //! \brief set debug log.
@@ -65,7 +65,6 @@ void ccgonowdep_SetDebugLog(bool is_debug_log);
 //! \return Returns version string
 //! \endif
 const char* ccgonowdep_GetVersion(void);
-
 
 #ifdef __cplusplus
 }
