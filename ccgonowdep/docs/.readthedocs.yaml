@@ -9,10 +9,6 @@ build:
     python: "3.11"
   apt_packages:
     - doxygen
-
-mkdocs:
-  configuration: ccgonowdep/mkdocs.yml
-
-python:
-  install:
-    - requirements: ccgonowdep/docs/requirements.txt
+  commands:
+    - pip install -r ccgonowdep/docs/requirements.txt
+    - cd ccgonowdep && mkdocs build --site-dir $READTHEDOCS_OUTPUT/html

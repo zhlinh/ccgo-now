@@ -9,10 +9,6 @@ build:
     python: "3.11"
   apt_packages:
     - doxygen
-
-mkdocs:
-  configuration: ccgonow/mkdocs.yml
-
-python:
-  install:
-    - requirements: ccgonow/docs/requirements.txt
+  commands:
+    - pip install -r ccgonow/docs/requirements.txt
+    - cd ccgonow && mkdocs build --site-dir $READTHEDOCS_OUTPUT/html
