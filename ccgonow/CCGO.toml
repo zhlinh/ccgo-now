@@ -32,6 +32,11 @@ json_metadata_path = "build_info.json"
 # CMake version
 cmake_version = "3.22.1"
 
+# Submodule internal dependencies for shared library linking
+# Format: module = ["dep1", "dep2"] means module depends on dep1 and dep2
+[build.submodule_deps]
+api = ["base"]
+
 [android]
 # Android project path
 project_path = "android/main_android_sdk"
